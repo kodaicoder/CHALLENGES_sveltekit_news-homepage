@@ -5,6 +5,9 @@
 	import FootContent from '$lib/components/Contents/FootContent.svelte';
 </script>
 
+<svelte:head>
+	<title>News homepage</title>
+</svelte:head>
 <ContentContainer>
 	<MainContent slot="mainContent" />
 	<NewContent slot="newContent" />
