@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*? USING LOCAL FONT FROM STATIC FOLDER */
+@font-face {
+	font-family: 'Inter';
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('/fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+/*? Simple Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	font: inherit;
+}
+img,
+svg {
+	margin: 0;
+	display: block;
+	max-width: 100%;
+}
+/*?---------------- */
+
+/*? Using local font-family */
+body {
+	@apply font-inter text-darkGrayishBlue;
+}
+/*?---------------- */
+
+.footerLabel:after {
+	@apply content-[''] absolute top-1/2 -right-2 rotate-45 -translate-y-1/2 border-8 border-blue-500;
+}

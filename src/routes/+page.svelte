@@ -1,2 +1,12 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import ContentContainer from '$lib/components/ContentContainer.svelte';
+	import MainContent from '$lib/components/Contents/MainContent.svelte';
+	import NewContent from '$lib/components/Contents/NewContent.svelte';
+	import FootContent from '$lib/components/Contents/FootContent.svelte';
+</script>
+
+<ContentContainer>
+	<MainContent slot="mainContent" />
+	<NewContent slot="newContent" />
+	<FootContent slot="footContent" />
+</ContentContainer>
