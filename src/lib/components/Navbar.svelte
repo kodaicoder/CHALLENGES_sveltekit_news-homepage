@@ -7,6 +7,7 @@
 	import menuImg from '$lib/images/icon-menu.svg';
 	import closeImg from '$lib/images/icon-menu-close.svg';
 	let menuShow = false;
+	let innerWidth = 0;
 
 	//? made body no longer scrolls when a side nav is open
 	//? and the scroll location is maintained both
@@ -31,10 +32,19 @@
 		}
 	}
 
+	/// fix issue while user adjust width of page and didn't close side nav menu
+	$: {
+		if (innerWidth > 768) {
+			menuShow = false;
+		}
+	}
+
 	const closeSideNav = () => {
 		menuShow = false;
 	};
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class="md:relative w-full p-4 fixed top-0 left-0 bg-white  grid grid-cols-2  items-center ">
 	<a href="#/" class="w-fit">
