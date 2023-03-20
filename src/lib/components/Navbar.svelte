@@ -32,7 +32,7 @@
 		}
 	}
 
-	/// fix issue while user adjust width of page and didn't close side nav menu
+	//? fix issue while user adjust width of page and didn't close side nav menu
 	$: {
 		if (innerWidth > 768) {
 			menuShow = false;
@@ -64,19 +64,6 @@
 		<NavList text="Popular" href="#popular" />
 		<NavList text="Trending" href="#trending" />
 		<NavList text="Categories" href="#categories" />
-
-		<!-- <li class="hover:bg-slate-500">
-			<a href="#new">New </a>
-		</li>
-		<li>
-			<a href="#popular">Popular </a>
-		</li>
-		<li>
-			<a href="#trending">Trending </a>
-		</li>
-		<li>
-			<a href="#categories">Categories </a>
-		</li> -->
 	</ul>
 </div>
 
@@ -100,7 +87,7 @@
 				</button>
 			</div>
 			<div class="p-4">
-				<ul class="flex flex-col gap-6 mt-12">
+				<ul class="flex flex-col mt-12">
 					<NavList text="Home" href="#home" on:linkClick={closeSideNav} />
 					<NavList text="New" href="#new" on:linkClick={closeSideNav} />
 					<NavList text="Popular" href="#popular" on:linkClick={closeSideNav} />

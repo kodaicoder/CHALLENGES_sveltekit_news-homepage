@@ -25,7 +25,7 @@
 			<li class="border-b border-grayishBlue py-6">
 				<a
 					href={`#${item.id}`}
-					class="text-offWhite font-bold text-lg leading-loose hover:text-softOrange"
+					class="text-offWhite font-bold text-lg leading-loose transition-all duration-200 hover:text-softOrange"
 					>{item.title}</a
 				>
 				<p class="text-sm text-grayishBlue leading-loose">

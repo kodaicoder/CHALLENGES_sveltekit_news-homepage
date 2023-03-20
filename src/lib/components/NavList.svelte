@@ -15,8 +15,8 @@
 	<!--? Note : in real project you should to using `$page.url.pathname` instead of `$page.url.hash` -->
 	<a
 		on:click={linkClick}
-		class="block text-black font-semibold md:text-sm md:text-darkGrayishBlue md:font-normal md:p-4 rounded-lg transition-all duration-200 hover:text-softOrange
-		 {$page.url.hash === `${href}` ? '!text-softOrange' : ''}"
+		class="block text-black font-semibold md:text-sm md:text-darkGrayishBlue md:font-normal p-4  rounded-lg transition-all duration-300 hover:text-softOrange
+		 {$page.url.hash === `${href}` ? '!text-softOrange bg-veryDarkBlue ml-0' : ''}"
 		{href}
 	>
 		{text}
